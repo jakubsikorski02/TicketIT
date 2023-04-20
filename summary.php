@@ -28,7 +28,7 @@
 
             echo '</div>';
             echo '<div class="profile-menu">';
-            echo '   <img src="images/profile.png" class="profile-menu-img">';
+            echo '<img src="images/profile.png" class="profile-menu-img">';
             echo '<div class="profile-menu-dropdown">';
 
             if (isset($_SESSION['user_id'])) {
