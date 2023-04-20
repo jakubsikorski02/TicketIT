@@ -1,0 +1,217 @@
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  border: none;
+}
+
+th {
+  background-color: #000000;
+}
+
+input[type="submit"] {
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+a {
+  color: #ffffff;
+}
+.seats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.summary-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.summary-container .text {
+  margin-bottom: 10px;
+}
+
+.summary-container .btn {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cointainer h1 {
+  text-align: center;
+  margin-top: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+.choose-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+.movie-info-container {
+  padding: 10px;
+}
+.summary-container input[type="submit"] {
+  border-radius: 5px;
+  background-color: #000;
+}
+.summary-container input[type="submit"]:hover {
+  background-color: #007bff;
+}
+.choose-container h4 {
+  text-align: center;
+}
+.choose-container {
+  background-color: #ccc;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+  padding: 10px;
+}
+.container-header h1 a,
+.container-header h1 a:visited,
+.container-header h1 a:active {
+  text-decoration: none;
+  color: white;
+}
+.logo {
+  padding: 10px;
+}
+.profile-menu {
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+  margin-right: 10px;
+}
+.about-us,
+.business {
+  margin-right: 70px;
+}
+
+.profile-menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+}
+
+.profile-menu:hover .profile-menu-dropdown {
+  display: block;
+}
+.profile-menu-dropdown a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.about {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.about a {
+  color: #ffffff;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .container-header {
+    flex-wrap: wrap;
+    padding: 10px 5px;
+  }
+  .profile-menu {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .about-us,
+  .business {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .profile-menu-dropdown {
+    top: 100%;
+    padding: 5px;
+  }
+  .container {
+    margin-top: 5%;
+  }
+
+  .choose-container {
+    margin-top: 10px;
+  }
+
+  .summary-container {
+    margin-top: 10px;
+    padding: 10
+  }
+
+  .summary-container .btn {
+    margin-top: 10px;
+  }
+
+  .seats-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  table {
+    font-size: 14px;
+    margin-top: 10px;
+    
+  }
+
+  th,
+  td {
+    padding: 5px;
+  }
+
+  th {
+    font-size: 14px;
+  }
+
+  td {
+    font-size: 12px;
+  }
+}

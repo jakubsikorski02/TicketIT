@@ -1,0 +1,113 @@
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+  padding: 10px;
+}
+.container-header h1 a,
+.container-header h1 a:visited,
+.container-header h1 a:active {
+  text-decoration: none;
+  color: white;
+}
+.logo {
+  padding: 10px;
+}
+.profile-menu {
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+  margin-right: 10px;
+}
+.about-us,
+.business {
+  margin-right: 70px;
+}
+
+.profile-menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+}
+
+.profile-menu:hover .profile-menu-dropdown {
+  display: block;
+}
+.profile-menu-dropdown a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.about {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.about a {
+  color: #ffffff;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  max-width: 100%;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.slider img {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  max-width: 100%;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .container-header {
+    flex-wrap: wrap;
+    padding: 10px 5px;
+  }
+  .profile-menu {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .about-us,
+  .business {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .profile-menu-dropdown {
+    top: 100%;
+    padding: 5px;
+  }
+}

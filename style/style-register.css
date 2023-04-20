@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #d3d3d3;
+}
+.container-register {
+  justify-content: center;
+  background-color: #fff;
+  padding: 50px;
+  border: solid black 1px;
+  border-radius: 15%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form {
+  justify-content: center;
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .container-login {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 0;
+  }
+}
+.name {
+  font-size: 200%;
+}
+.input input {
+  font-size: 150%;
+}
+.register-btn {
+  background-color: grey;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+.register-btn:hover {
+  background-color: #d3d3d3;
+}

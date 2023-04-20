@@ -1,0 +1,86 @@
+body {
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+}
+
+.profile-menu {
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.profile-menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+}
+
+.profile-menu:hover .profile-menu-dropdown {
+  display: block;
+}
+.profile-menu-dropdown a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about a {
+  color: #ffffff;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.container-header h1 a, .container-header h1 a:visited, .container-header h1 a:active{
+  text-decoration: none;
+  color: white;
+}
+
+.body-container {
+  display: flex;
+  align-items: stretch;
+}
+.nav-container {
+  width: 150px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.nav-container a {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-container a:hover {
+  background-color: #fff;
+  color: #333;
+}
+.main-content {
+  padding: 20px;
+  flex-grow: 1;
+}
