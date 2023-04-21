@@ -22,9 +22,9 @@
             session_start();
             if (isset($_SESSION['user_id'])) {
 
-                echo '<a href="movie-list.php"><span>Check the movies</span></a>';
+                echo '<a href="movie-list.php"><span>Movies</span></a>';
             } else {
-                echo '<a href="login.php"><span>Check the movies</span</a>';
+                echo '<a href="login.php"><span>Movies</span</a>';
             }
 
             echo '</div>';

@@ -55,9 +55,6 @@
             <div class="log-btn">
                 <button class="login-btn" value="Zaloguj" type="submit">Zaloguj się</button>
             </div>
-            <div class="forgot">
-                <span><a href="#">Nie pamiętasz hasła?</a></span>
-            </div>
             <hr>
             <div class="register">
                 <a href="register.php"><button class="register-btn" value="Utwórz konto" type="button">Utwórz
