@@ -50,22 +50,48 @@
             </div>
         </div>
     </div>
-        <div class="slider">
-            <?php
-            $sql = "SELECT poster FROM movies";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<img src="images/' . $row['poster'] . '" alt="">';
-                }
-            } else {
-                echo "No movie posters found.";
+    <div class="main-content">
+    <div class="slider-container">
+        <?php
+        $sql = "SELECT poster, movie_id FROM movies";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '<a href="schedule.php?movieId=' . $row['movie_id'] . '"><img src="images/' . $row['poster'] . '"></a>';
             }
-            ?>
-            </div>
-        <div class="footer">
-            <p>Designed and made by Jakub Sikorski</p>
-        </div>
+        } else {
+            echo "No movie posters found.";
+        }
+        ?>
+    </div>
+    <button class="scroll-button scroll-button-left" id="prevButton">&#8249;</button>
+    <button class="scroll-button scroll-button-right" id="nextButton">&#8250;</button>
+</div>
+<div class="footer">
+    <p>Designed and made by Jakub Sikorski</p>
+</div>
+
+<script>
+    const sliderContainer = document.querySelector('.slider-container');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const slideWidth = sliderContainer.querySelector('img').offsetWidth;
+    const sliderContainerWidth = sliderContainer.offsetWidth;
+
+    prevButton.addEventListener('click', () => {
+        sliderContainer.scrollBy({
+            left: -sliderContainerWidth,
+            behavior: 'smooth'
+        });
+    });
+
+    nextButton.addEventListener('click', () => {
+        sliderContainer.scrollBy({
+            left: sliderContainerWidth,
+            behavior: 'smooth'
+        });
+    });
+</script>
 </body>
 
 </html>
