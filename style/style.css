@@ -1,10 +1,12 @@
 body {
   background-color: #ffffff;
   color: #000000;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container-header {
@@ -14,22 +16,28 @@ body {
   color: #ffffff;
   align-items: center;
   padding: 10px;
+  position: relative;
+  height: 5vh;
 }
+
 .container-header h1 a,
 .container-header h1 a:visited,
 .container-header h1 a:active {
   text-decoration: none;
   color: white;
 }
+
 .logo {
   padding: 10px;
 }
+
 .profile-menu {
   position: relative;
   cursor: pointer;
   padding: 20px;
   margin-right: 10px;
 }
+
 .about-us,
 .business {
   margin-right: 70px;
@@ -40,14 +48,16 @@ body {
   position: absolute;
   top: 70px;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   background-color: white;
   padding: 10px;
+  z-index: 999;
 }
 
 .profile-menu:hover .profile-menu-dropdown {
   display: block;
 }
+
 .profile-menu-dropdown a {
   display: block;
   color: #000000;
@@ -68,31 +78,41 @@ body {
   margin-right: 10px;
 }
 
+.main-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
 .slider-container {
   display: flex;
-  max-width: 100%;
   align-items: baseline;
-  position: relative;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  flex: 1;
 }
 
-.slider img {
-  height: 100%;
+.slider-container img {
+  position: relative;
+  margin: 0;
 }
 
 .footer {
   background-color: #000;
   color: #fff;
   text-align: center;
-  margin: 0;
-  padding: 10px;
+  position: relative;
+  height: 5vh;
 }
+
 .scroll-button {
-  position: fixed;
+  position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 50px;
   height: 50px;
   background-color: #ccc;
@@ -102,6 +122,7 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
 .scroll-button-left {
   left: 0;
 }
@@ -109,6 +130,7 @@ body {
 .scroll-button-right {
   right: 0;
 }
+
 
 @media screen and (max-width: 767px) {
   .container-header {

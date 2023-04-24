@@ -50,7 +50,7 @@
             </div>
         </div>
     </div>
-    <div class="movie-container">
+    <div class="main-container">
         <?php
 
 
@@ -65,19 +65,23 @@
 
         while ($row = $result->fetch_assoc()) {
             echo '<div class="movie-card">';
+            echo '<img src="images/'.$row['poster'].'">';
+            echo '<div clas="movie-info">';
             echo '<h2>' . $row['title'] . '</h2>';
             echo '<p>Director: ' . $row['director'] . '</p>';
             echo '<p>Year: ' . $row['year'] . '</p>';
             echo '<p>Description: ' . $row['description'] . '</p>';
             echo '<p>Genre: ' . $row['genre'] . '</p>';
-            echo '<a href="schedule.php?movieId=' . $row['movie_id'] . '"><button type="submit" class="select-btn">Select Movie</button></a>';
+            echo '</div>';
+            echo '<a href="schedule.php?movieId=' . $row['movie_id'] . '"><button class="select-btn">&#8250;</button></a>';
             echo '</div>';
         }
         ?>
     </div>
     <div class="footer">
-        <p>Designed and made by Jakub Sikorski</p>
+        <p>Jakub Sikorski</p>
     </div>
+
 </body>
 
 </html>
