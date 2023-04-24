@@ -107,6 +107,8 @@ body {
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  position: relative;
 }
 .movie-card img {
   width: 200px;
@@ -141,28 +143,17 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  width: 100%;
-  border-radius: 5px;
-}
-
-.select-btn:hover {
-  background-color: #007bff;
-}
-
-.select-btn {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 100%;
-  border-radius: 5px;
   margin-top: auto;
+  position: absolute;
+  bottom: 5px;
+  right: 5px; 
+  font-size: 150%;
 }
+
 .select-btn:hover {
   background-color: #007bff;
 }
+
 @media screen and (max-width: 767px) {
   .container-header {
     flex-wrap: wrap;
