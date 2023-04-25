@@ -65,7 +65,7 @@
 
         while ($row = $result->fetch_assoc()) {
             echo '<div class="movie-card">';
-            echo '<img src="images/'.$row['poster'].'">';
+            echo '<img src="data:image/png;base64,'.$row['poster'].'">';
             echo '<div clas="movie-info">';
             echo '<h2>' . $row['title'] . '</h2>';
             echo '<p>Director: ' . $row['director'] . '</p>';
