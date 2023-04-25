@@ -20,7 +20,7 @@
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<a href="schedule.php?movieId=' . $row['movie_id'] . '"><img src="data:image/png;base64,' . $row['poster'] . '"></a>';
+                    echo '<a href="schedule.php?movieId=' . $row['movie_id'] . '"><img src="' . $row['poster'] . '"></a>';
                 }
             } else {
                 echo "No movie posters found.";
