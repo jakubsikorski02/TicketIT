@@ -78,7 +78,7 @@ body {
   margin-right: 10px;
 }
 
-.main-container  {
+.main-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +130,6 @@ body {
 .scroll-button-right {
   right: 0;
 }
-
 
 @media screen and (max-width: 767px) {
   .container-header {

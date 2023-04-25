@@ -1,9 +1,81 @@
 body {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
   font-family: Arial, sans-serif;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  height: 5vh;
+}
+
+.container-header h1 a,
+.container-header h1 a:visited,
+.container-header h1 a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.profile-menu {
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+.about-us,
+.business {
+  margin-right: 70px;
+}
+
+.profile-menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  min-width: 100%;
+  background-color: white;
+  padding: 10px;
+  z-index: 999;
+}
+
+.profile-menu:hover .profile-menu-dropdown {
+  display: block;
+}
+
+.profile-menu-dropdown a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.about {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.about a {
+  color: #ffffff;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-right: 10px;
 }
 
 table {
@@ -54,21 +126,25 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
-.cointainer h1 {
+.main-cointainer h1 {
   text-align: center;
   margin-top: 0;
 }
-.container {
+.main-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin: 1%;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
 }
 .choose-container {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
+  background-color: #ccc;
 }
 .movie-info-container {
   padding: 10px;
@@ -83,78 +159,13 @@ a {
 .choose-container h4 {
   text-align: center;
 }
-.choose-container {
-  background-color: #ccc;
-}
-.container-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #000000;
-  color: #ffffff;
-  align-items: center;
-  padding: 10px;
-}
-.container-header h1 a,
-.container-header h1 a:visited,
-.container-header h1 a:active {
-  text-decoration: none;
-  color: white;
-}
-.logo {
-  padding: 10px;
-}
-.profile-menu {
-  position: relative;
-  cursor: pointer;
-  padding: 20px;
-  margin-right: 10px;
-}
-.about-us,
-.business {
-  margin-right: 70px;
-}
-
-.profile-menu-dropdown {
-  display: none;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  padding: 10px;
-}
-
-.profile-menu:hover .profile-menu-dropdown {
-  display: block;
-}
-.profile-menu-dropdown a {
-  display: block;
-  color: #000000;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.about {
-  display: flex;
-  justify-content: flex-start;
-  padding: 5px;
-}
-
-.about a {
-  color: #ffffff;
-  margin-left: 10px;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
 .footer {
   background-color: #000;
   color: #fff;
   text-align: center;
-  margin: 0;
-  padding: 10px;
+  position: relative;
+  height: 5vh;
 }
-
 @media screen and (max-width: 767px) {
   .container-header {
     flex-wrap: wrap;
@@ -183,7 +194,7 @@ a {
 
   .summary-container {
     margin-top: 10px;
-    padding: 10
+    padding: 10;
   }
 
   .summary-container .btn {
@@ -199,7 +210,6 @@ a {
   table {
     font-size: 14px;
     margin-top: 10px;
-    
   }
 
   th,
