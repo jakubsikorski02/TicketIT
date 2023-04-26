@@ -10,14 +10,27 @@
 
 <body>
     <?php
-    include('myaccount.php');
-    if (!isset($_SESSION['user_id'])) {
-        header("Location: login.php");
-        exit();
-    }
+    include("header.php");
     ?>
+
+    <div class="main-container">
+        <?php
+        if (!isset($_SESSION['user_id'])) {
+            $user_id = $_SESSION['user_id'];
+            header("Location: login.php");
+            exit();
+        }
+
+        echo '<div class="nav-container">';
+        echo '<nav>';
+        echo '<a href="account.php">Profile</a>';
+        echo '<a href="currentbookings.php">Current bookings</a>';
+        echo '</nav>';
+        echo '</div>';
+
+        ?>
     <?php
-    echo '<div class="main-content">';
+    echo '<div class="user-container">';
     $user_id = $_SESSION['user_id'];
     $sql = "SELECT login, email FROM users WHERE id = $user_id";
     $result = $conn->query($sql);
@@ -30,6 +43,10 @@
     echo 'login: ' . $login;
     echo '</div>';
     ?>
+    </div>
+    </div>
+    <div class="footer">
+        <p>Jakub Sikorski</p>
     </div>
 </body>
 

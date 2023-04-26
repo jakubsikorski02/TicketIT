@@ -1,11 +1,12 @@
 body {
   background-color: #ffffff;
   color: #000000;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .container-header {
@@ -14,12 +15,32 @@ body {
   background-color: #000000;
   color: #ffffff;
   align-items: center;
+  padding: 10px;
+  position: relative;
+  height: 5vh;
+}
+
+.container-header h1 a,
+.container-header h1 a:visited,
+.container-header h1 a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  padding: 10px;
 }
 
 .profile-menu {
   position: relative;
   cursor: pointer;
   padding: 20px;
+  margin-right: 10px;
+}
+
+.about-us,
+.business {
+  margin-right: 70px;
 }
 
 .profile-menu-dropdown {
@@ -27,14 +48,16 @@ body {
   position: absolute;
   top: 70px;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   background-color: white;
   padding: 10px;
+  z-index: 999;
 }
 
 .profile-menu:hover .profile-menu-dropdown {
   display: block;
 }
+
 .profile-menu-dropdown a {
   display: block;
   color: #000000;
@@ -44,8 +67,8 @@ body {
 
 .about {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 5px;
 }
 
 .about a {
@@ -54,15 +77,17 @@ body {
   text-decoration: none;
   margin-right: 10px;
 }
-.container-header h1 a, .container-header h1 a:visited, .container-header h1 a:active{
-  text-decoration: none;
-  color: white;
+
+.main-container {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
 }
 
-.body-container {
-  display: flex;
-  align-items: stretch;
-}
+
 .nav-container {
   width: 150px;
   background-color: #333;
@@ -80,7 +105,10 @@ body {
   background-color: #fff;
   color: #333;
 }
-.main-content {
-  padding: 20px;
-  flex-grow: 1;
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  height: 5vh;
 }
