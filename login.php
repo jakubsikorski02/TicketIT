@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/style-login.css">
     <title>Document</title>
 </head>
 
 <body>
     <?php
-    session_start();
-    include('dbconnection.php');
+    include("header.php");
     if (isset($_POST['login'])) {
         $login = $_POST['login'];
         $user_password = $_POST['password'];
@@ -42,24 +41,28 @@
         }
     }
     ?>
-    <div class="container-login">
-        <form class="form" method="POST">
-            <div class="input">
-                <p class="name">Login</p>
-                <input type="text" name="login" required>
-            </div>
-            <div class="input">
-                <p class="name">Password</p>
-                <input type="password" name="password" required>
-            </div>
-            <div class="log-btn">
-                <button class="login-btn" value="Zaloguj" type="submit">Zaloguj się</button>
-            </div>
-            <hr>
-            <div class="register">
-                <a href="register.php"><button class="register-btn" value="Utwórz konto" type="button">Utwórz
-                        konto</button></a>
-            </div>
-        </form>
+    <div class="main-container">
+        <div class="container-login">
+            <form class="form" method="POST">
+                <div class="input">
+                    <p class="name">Login</p>
+                    <input type="text" name="login" required>
+                </div>
+                <div class="input">
+                    <p class="name">Password</p>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="log-btn">
+                    <button class="submit-btn login-btn" value="Log in" type="submit">Log in</button>
+                </div>
+                <hr>
+                <div class="register">
+                    <a href="register.php"><button class="submit-btn register-btn" value="Sign up" type="button">Sign up</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Jakub Sikorski</p>
     </div>
 </body>

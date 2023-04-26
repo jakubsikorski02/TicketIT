@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 .container-header {
   display: flex;
   justify-content: space-between;
@@ -85,7 +86,7 @@ body {
   margin: 0;
   flex-grow: 1;
 }
-.container-register {
+.container-login {
   justify-content: center;
   background-color: #ccc;
   padding: 50px;
@@ -97,6 +98,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.form {
+  justify-content: center;
 }
 
 .input {
@@ -114,10 +119,8 @@ body {
   border-radius: 5px;
   padding: 10px;
 }
-
 .name {
   font-size: 200%;
-  margin: 0 auto;
 }
 
 .input input {
@@ -127,14 +130,35 @@ body {
 .submit-btn:hover {
   background-color: #007bff;
 }
-.already-have a{
-  text-decoration: underline;
+.name {
+  margin: 0 auto;
 }
-
 .footer {
   background-color: #000;
   color: #fff;
   text-align: center;
   position: relative;
   height: 5vh;
+}
+
+@media screen and (max-width: 600px) {
+  .container-login {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 0;
+    position: static;
+    margin: 50px auto;
+  }
+
+  .name {
+    font-size: 150%;
+  }
+  .input input {
+    font-size: 120%;
+  }
+
+  .login-btn,
+  .register-btn {
+    padding: 8px;
+  }
 }

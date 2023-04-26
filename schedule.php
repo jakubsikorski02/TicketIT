@@ -23,7 +23,7 @@
             $result = $conn->query($sql);
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '<div class="selected-movie">';
-                echo '<img src="data:image/png;base64,' . $row['poster'] . '">';
+                echo '<img src="' . $row['poster'] . '">';
                 echo '<div class="movie-info">';
                 echo '<h2>' . $row['title'] . '</h2>';
                 echo '<p>Director: ' . $row['director'] . '</p>';
