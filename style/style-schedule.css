@@ -147,22 +147,11 @@ body {
   height: 5vh;
 }
 
-@media screen and (max-width: 767px) {
-  .container-header {
-    flex-wrap: wrap;
-    padding: 10px 5px;
-  }
-  .profile-menu {
-    margin-right: 0;
-    margin-top: 10px;
-  }
-  .about-us,
-  .business {
-    margin-right: 0;
-    margin-top: 10px;
-  }
-  .profile-menu-dropdown {
-    top: 100%;
-    padding: 5px;
-  }
+.profile-menu-img {
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  object-position: center;
+  border-radius: 50%;
+  margin-right: 10px;
 }

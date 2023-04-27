@@ -166,62 +166,11 @@ a {
   position: relative;
   height: 5vh;
 }
-@media screen and (max-width: 767px) {
-  .container-header {
-    flex-wrap: wrap;
-    padding: 10px 5px;
-  }
-  .profile-menu {
-    margin-right: 0;
-    margin-top: 10px;
-  }
-  .about-us,
-  .business {
-    margin-right: 0;
-    margin-top: 10px;
-  }
-  .profile-menu-dropdown {
-    top: 100%;
-    padding: 5px;
-  }
-  .container {
-    margin-top: 5%;
-  }
-
-  .choose-container {
-    margin-top: 10px;
-  }
-
-  .summary-container {
-    margin-top: 10px;
-    padding: 10;
-  }
-
-  .summary-container .btn {
-    margin-top: 10px;
-  }
-
-  .seats-container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  table {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
-  th,
-  td {
-    padding: 5px;
-  }
-
-  th {
-    font-size: 14px;
-  }
-
-  td {
-    font-size: 12px;
-  }
+.profile-menu-img {
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  object-position: center;
+  border-radius: 50%;
+  margin-right: 10px;
 }

@@ -76,7 +76,6 @@ body {
   margin-left: 10px;
   text-decoration: none;
   margin-right: 10px;
-
 }
 .main-container {
   display: flex;
@@ -90,7 +89,7 @@ body {
 
 .summary-container {
   border: 1px solid #000;
-  padding:2% ;
+  padding: 2%;
   background-color: #ccc;
   color: #000;
   border-radius: 5px;
@@ -106,7 +105,7 @@ body {
   text-decoration: none;
   color: #fff;
 }
-.summary-container p{
+.summary-container p {
   padding: 1%;
   font-size: 120%;
 }
@@ -127,25 +126,14 @@ body {
   border-radius: 5px;
   margin-top: auto;
   bottom: 5px;
-  right: 5px; 
+  right: 5px;
 }
 
-@media screen and (max-width: 767px) {
-  .container-header {
-    flex-wrap: wrap;
-    padding: 10px 5px;
-  }
-  .profile-menu {
-    margin-right: 0;
-    margin-top: 10px;
-  }
-  .about-us,
-  .business {
-    margin-right: 0;
-    margin-top: 10px;
-  }
-  .profile-menu-dropdown {
-    top: 100%;
-    padding: 5px;
-  }
+.profile-menu-img {
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  object-position: center;
+  border-radius: 50%;
+  margin-right: 10px;
 }

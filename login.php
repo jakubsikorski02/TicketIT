@@ -10,37 +10,36 @@
 </head>
 
 <body>
-    <?php
-    include("header.php");
-    if (isset($_POST['login'])) {
-        $login = $_POST['login'];
-        $user_password = $_POST['password'];
+<?php
+include("header.php");
+if (isset($_POST['login'])) {
+    $login = $_POST['login'];
+    $user_password = $_POST['password'];
 
-        $stmt = $conn->prepare("SELECT * FROM users WHERE login=?");
-        $stmt->bind_param("s", $login);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    $stmt = $conn->prepare("SELECT * FROM users WHERE login=?");
+    $stmt->bind_param("s", $login);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        if ($result->num_rows == 1) {
-            $row = $result->fetch_assoc();
-            $hashed_password = $row['password'];
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        $hashed_password = $row['password'];
 
-            if (password_verify($user_password, $hashed_password)) {
-
-                $_SESSION["logged"] = true;
-                $_SESSION["user_id"] = $row['id'];
-                header("Location: index.php");
-
-
-                exit();
-            } else {
-                echo "<div class='container-login'><p class='error'>Nieprawidłowe hasło.</p></div>";
-            }
+        if (password_verify($user_password, $hashed_password)) {
+            $_SESSION["logged"] = true;
+            $_SESSION["user_id"] = $row['id'];
+            header("Location: index.php");
+            exit();
         } else {
-            echo "<div class='container-login'><p class='error'>Nieprawidłowy login.</p></div>";
+            $error_message = "Nieprawidłowy login lub hasło.";
         }
+    } else {
+        $error_message = "Nieprawidłowy login lub hasło.";
     }
-    ?>
+
+}
+?>
+
     <div class="main-container">
         <div class="container-login">
             <form class="form" method="POST">
@@ -55,6 +54,14 @@
                 <div class="log-btn">
                     <button class="submit-btn login-btn" value="Log in" type="submit">Log in</button>
                 </div>
+                <div class="info">
+                <?php
+                        if (isset($error_message)) {
+                            echo "<p class='error'>$error_message</p>";
+                            unset($error_message);
+                        }
+                ?>
+            </div>
                 <hr>
                 <div class="register">
                     <a href="register.php"><button class="submit-btn register-btn" value="Sign up" type="button">Sign up</button></a>
@@ -66,3 +73,4 @@
         <p>Jakub Sikorski</p>
     </div>
 </body>
+</html>

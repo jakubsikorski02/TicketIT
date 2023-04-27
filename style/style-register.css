@@ -127,7 +127,7 @@ body {
 .submit-btn:hover {
   background-color: #007bff;
 }
-.already-have a{
+.already-have a {
   text-decoration: underline;
 }
 
@@ -137,4 +137,12 @@ body {
   text-align: center;
   position: relative;
   height: 5vh;
+}
+.profile-menu-img {
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  object-position: center;
+  border-radius: 50%;
+  margin-right: 10px;
 }

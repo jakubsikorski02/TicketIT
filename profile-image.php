@@ -10,7 +10,7 @@
 
 <body>
     <div class="file-container">
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data"  accept="image/png, image/jpeg">
             <label for="file">Choose an image:</label>
             <input type="file" name="file" id="file">
             <button type="submit">Upload</button>

@@ -141,24 +141,11 @@ body {
   height: 5vh;
 }
 
-@media screen and (max-width: 600px) {
-  .container-login {
-    width: 90%;
-    max-width: 400px;
-    border-radius: 0;
-    position: static;
-    margin: 50px auto;
-  }
-
-  .name {
-    font-size: 150%;
-  }
-  .input input {
-    font-size: 120%;
-  }
-
-  .login-btn,
-  .register-btn {
-    padding: 8px;
-  }
+.profile-menu-img {
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  object-position: center;
+  border-radius: 50%;
+  margin-right: 10px;
 }
