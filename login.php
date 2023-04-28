@@ -11,7 +11,7 @@
 
 <body>
 <?php
-include("header.php");
+include("includes/header.php");
 if (isset($_POST['login'])) {
     $login = $_POST['login'];
     $user_password = $_POST['password'];
@@ -56,9 +56,9 @@ if (isset($_POST['login'])) {
                 </div>
                 <div class="info">
                 <?php
-                        if (isset($error_message)) {
-                            echo "<p class='error'>$error_message</p>";
-                            unset($error_message);
+                        if (isset($message)) {
+                            echo "<p class='error'>$message</p>";
+                            unset($message);
                         }
                 ?>
             </div>

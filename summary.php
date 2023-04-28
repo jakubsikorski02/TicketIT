@@ -11,12 +11,11 @@
 
 <body>
     <?php
-    include("header.php");
+    include("includes/header.php");
     ?>
     <div class="main-container">
         <h1>Order Summary</h1>
         <?php
-        include('dbconnection.php');
         $summaryId = $_SESSION["insertedId"];
         $sql = "SELECT movies.title, seats.row_number, seats.seat_number, schedule.date, schedule.hour, cinema_hall.hall_name 
             FROM movies, seats, schedule, booked, cinema_hall 

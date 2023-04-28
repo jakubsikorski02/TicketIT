@@ -10,7 +10,7 @@
 
 <body>
 <?php
-  include("header.php");
+  include("includes/header.php");
 ?>
   <div class="main-container">
     <h1>Choose seat</h1>

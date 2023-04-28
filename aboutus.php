@@ -11,7 +11,7 @@
 
 <body>
     <?php
-    include("header.php");
+    include("includes/header.php");
     ?>
     <div class="main-container">
         <div class="info-container">

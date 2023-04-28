@@ -12,7 +12,7 @@
 <body>
 
     <?php
-    include("header.php");
+    include("includes/header.php");
     if (!isset($_SESSION['userId'])) {
         header("Location: login.php");
         exit();

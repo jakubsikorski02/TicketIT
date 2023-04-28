@@ -11,7 +11,7 @@
 
 <body>
     <?php
-    include("header.php");
+    include("includes/header.php");
     ?>
     <div class="main-container">
         <div class="schedule-container">
@@ -53,11 +53,6 @@
                 echo 'No schedule available for the selected movie.';
             }
 
-            if (isset($_SESSION['user_id'])) {
-                $user_id = $_SESSION['user_id'];
-            } else {
-                header("Location: login.php");
-            }
             ?>
         </div>
     </div>
