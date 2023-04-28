@@ -7,17 +7,17 @@
         <?php
         session_start();
         if (isset($_GET['action']) && $_GET['action'] == "logout") {
-            unset($_SESSION['user_id']);
+            unset($_SESSION['userId']);
             header("Location: index.php");
             exit;
         }
         include("dbconnection.php");
-        if (isset($_SESSION['user_id'])) {
-            $user_id = $_SESSION['user_id'];
+        if (isset($_SESSION['userId'])) {
+            $userId = $_SESSION['userId'];
             echo '<a href="movie-list.php"><span class="movies">Movies</span></a>';
             echo '</div>';
             echo '<div class="profile-menu">';
-            $sql0 = "SELECT user_image FROM users WHERE id = $user_id";
+            $sql0 = "SELECT user_image FROM users WHERE id = $userId";
             $result0 = $conn->query($sql0);
             $row0 = $result0->fetch_assoc();
             $imageSrc = $row0["user_image"];

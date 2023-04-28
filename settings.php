@@ -12,11 +12,18 @@
 <body>
     <?php
     include("header.php");
+    if (!isset($_SESSION['userId'])) {
+        header("Location: login.php");
+        exit();
+    }
     ?>
     <div class="main-container">
-        <?php
-        include("settingsnav.php");
-        ?>
+        <div class="nav-container">
+            <nav>
+                <a href="accountdetails.php">Account details</a>
+                <a href="profilepicture.php">Profile picture</a>
+            </nav>
+        </div>
 
     </div>
     <div class="footer">

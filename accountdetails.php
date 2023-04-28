@@ -12,12 +12,20 @@
 <body>
     <?php
     include("header.php");
+    if (!isset($_SESSION['userId'])) {
+        header("Location: login.php");
+        exit();
+    }
     ?>
     <div class="main-container">
+        <div class="nav-container">
+            <nav>
+                <a href="accountdetails.php">Account details</a>
+                <a href="profilepicture.php">Profile picture</a>
+            </nav>
+        </div>
         <?php
-        include("settingsnav.php");
-        $user_id = $_SESSION['user_id'];
-        $sql = "SELECT login, email FROM users WHERE id = $user_id";
+        $sql = "SELECT login, email FROM users WHERE id = $userId";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         $login = $row['login'];

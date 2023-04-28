@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <link rel="stylesheet" href="style/style-login.css">
-    <title>Document</title>
+    <title>TicketIT</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@ if (isset($_POST['login'])) {
 
         if (password_verify($user_password, $hashed_password)) {
             $_SESSION["logged"] = true;
-            $_SESSION["user_id"] = $row['id'];
+            $_SESSION["userId"] = $row['id'];
             header("Location: index.php");
             exit();
         } else {

@@ -13,17 +13,22 @@
 
     <?php
     include("header.php");
-    if (!isset($_SESSION['user_id'])) {
+    if (!isset($_SESSION['userId'])) {
         header("Location: login.php");
         exit();
     }
     ?>
     <div class="main-container">
+        <div class="nav-container">
+            <nav>
+                <a href="currentbookings.php">Current bookings</a>
+                <a href="bookingshistory.php">Bookings history</a>
+            </nav>
+        </div>
         <?php
-        include("bookingsnav.php");
         $sql = "SELECT movies.title, seats.row_number, seats.seat_number, schedule.date, schedule.hour, cinema_hall.hall_name 
-            FROM movies, seats, schedule, booked, cinema_hall 
-            WHERE booked.schedule_id = schedule.schedule_id AND schedule.movie_id = movies.movie_id AND booked.seat_id = seats.seat_id AND seats.hall_id = cinema_hall.hall_id AND schedule.date <= NOW() AND user_id = $user_id";
+            FROM movies, seats, schedule, booked, cinema_hall, users
+            WHERE booked.user_id = users.id AND booked.schedule_id = schedule.schedule_id AND schedule.movie_id = movies.movie_id AND booked.seat_id = seats.seat_id AND seats.hall_id = cinema_hall.hall_id AND schedule.date <= NOW() AND users.id = $userId";
         $result = $conn->query($sql);
         echo '<div class="bookings-container">';
         while ($row = $result->fetch_assoc()) {

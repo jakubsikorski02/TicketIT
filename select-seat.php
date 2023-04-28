@@ -15,12 +15,6 @@
   <div class="main-container">
     <h1>Choose seat</h1>
     <?php
-    include("dbconnection.php");
-    if (isset($_SESSION['user_id'])) {
-      $user_id = $_SESSION['user_id'];
-    } else {
-      echo 'Zaloguj się';
-    }
     $scheduleId = $_GET['scheduleId'];
     $sql2 = "SELECT movies.title, schedule.date, schedule.hour, cinema_hall.hall_name FROM cinema_hall, movies, schedule WHERE  schedule.schedule_id = $scheduleId AND movies.movie_id=schedule.movie_id AND schedule.hall_id = cinema_hall.hall_id;";
     $result2 = $conn->query($sql2);
@@ -98,7 +92,7 @@
     echo '</div>';
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $seatId = $_POST["selectedSeatId"];
-      $userId = $_SESSION["user_id"];
+      $userId = $_SESSION["userId"];
     }
 
 
@@ -117,9 +111,9 @@
       echo '</div>';
       if (isset($_POST["finalStep"])) {
         $seatId = $_POST["seatId"];
-        $user_id = $_SESSION["user_id"];
-        echo $user_id;
-        $sql3 = "INSERT INTO `booked`(`booked_id`, `schedule_id`, `seat_id`, `user_id`) VALUES (NULL, $scheduleId, $seatId, $user_id)";
+        $userId = $_SESSION["userId"];
+        echo $userId;
+        $sql3 = "INSERT INTO `booked`(`booked_id`, `schedule_id`, `seat_id`, `user_id`) VALUES (NULL, $scheduleId, $seatId, $userId)";
         if ($conn->query($sql3)) {
           $insertedId = $conn->insert_id;
           $_SESSION['insertedId'] = $insertedId;
