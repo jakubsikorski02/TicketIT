@@ -30,14 +30,13 @@
 }
 .summary-container p {
   padding: 1%;
-  font-size: 120%;
+  font-size: 22px;
 }
 .footer {
   background-color: #000;
   color: #fff;
   text-align: center;
-  position: relative;
-  height: 5vh;
+  height: 5%
 }
 
 .summary-btn {
@@ -52,11 +51,3 @@
   right: 5px;
 }
 
-.profile-menu-img {
-  display: block;
-  width: 5vh;
-  height: 5vh;
-  object-position: center;
-  border-radius: 50%;
-  margin-right: 10px;
-}

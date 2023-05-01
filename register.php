@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="info">
                 <?php if (isset($message)): ?>
-                    <p class='error' style="color: red; font-size: 80%;"><?php echo $message ?></p>
+                    <p class='error' style="color: red; font-size: 12px;"><?php echo $message ?></p>
                 <?php endif; ?>
             </div>
             <hr>
@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
     </div>
 </div>
 <div class="footer">
-    <p>Jakub Sikorski</p>
+    <p>2023 © Jakub Sikorski</p>
 </div>
 </body>
 

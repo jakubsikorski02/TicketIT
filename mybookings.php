@@ -13,7 +13,7 @@
 <body>
     <?php
     include("includes/header.php");
-    if (!isset($_SESSION['user_id'])) {
+    if (!isset($_SESSION['userId'])) {
         header("Location: login.php");
         exit();
     }
@@ -30,7 +30,7 @@
     </div>
 
     <div class="footer">
-        <p>Jakub Sikorski</p>
+        <p>2023 © Jakub Sikorski</p>
     </div>
 </body>
 

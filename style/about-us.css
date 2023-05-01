@@ -16,14 +16,6 @@
   background-color: #000;
   color: #fff;
   text-align: center;
-  position: relative;
-  height: 5vh;
+  height: 5%;
 }
-.profile-menu-img {
-  display: block;
-  width: 5vh;
-  height: 5vh;
-  object-position: center;
-  border-radius: 50%;
-  margin-right: 10px;
-}
+

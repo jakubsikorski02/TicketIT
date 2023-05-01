@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="footer">
-        <p>Jakub Sikorski</p>
+        <p>2023 © Jakub Sikorski</p>
     </div>
 
     <script>
@@ -41,18 +41,17 @@
         const prevButton = document.getElementById('prevButton');
         const nextButton = document.getElementById('nextButton');
         const slideWidth = sliderContainer.querySelector('img').offsetWidth;
-        const sliderContainerWidth = sliderContainer.offsetWidth;
 
         prevButton.addEventListener('click', () => {
             sliderContainer.scrollBy({
-                left: -sliderContainerWidth,
+                left: -slideWidth,
                 behavior: 'smooth'
             });
         });
 
         nextButton.addEventListener('click', () => {
             sliderContainer.scrollBy({
-                left: sliderContainerWidth,
+                left: slideWidth,
                 behavior: 'smooth'
             });
         });

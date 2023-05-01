@@ -79,3 +79,21 @@
   border-radius: 50%;
   margin-right: 10px;
 }
+@media (max-width: 480px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .schedule-container {
+    margin-top: 20px;
+  }
+  .selected-movie {
+    flex-direction: column;
+    text-align: center;
+  }
+  .selected-movie img {
+    width: 100%;
+    border-radius: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

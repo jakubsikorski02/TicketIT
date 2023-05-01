@@ -29,21 +29,23 @@
 
         while ($row = $result->fetch_assoc()) {
             echo '<div class="movie-card">';
+            echo '<div class="movie-poster">';
             echo '<img src="' . $row['poster'] . '">';
-            echo '<div clas="movie-info">';
+            echo '</div>';
+            echo '<div class="movie-info">';
             echo '<h2>' . $row['title'] . '</h2>';
             echo '<p>Director: ' . $row['director'] . '</p>';
             echo '<p>Year: ' . $row['year'] . '</p>';
             echo '<p>Description: ' . $row['description'] . '</p>';
             echo '<p>Genre: ' . $row['genre'] . '</p>';
+            echo '<a href="schedule.php?movieId=' . $row['movie_id'] . '" class="link-btn"><button class="select-btn">&#8250;</button></a>';
             echo '</div>';
-            echo '<a href="schedule.php?movieId=' . $row['movie_id'] . '"><button class="select-btn">&#8250;</button></a>';
             echo '</div>';
         }
         ?>
     </div>
     <div class="footer">
-        <p>Jakub Sikorski</p>
+        <p>2023 © Jakub Sikorski</p>
     </div>
 
 </body>

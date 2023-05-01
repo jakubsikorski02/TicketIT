@@ -1,5 +1,42 @@
 @import url(header.css);
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+.select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.choose-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ccc;
+}
+
+.movie-info-container {
+  padding: 10px;
+}
+
+.seats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.summary-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
 table {
   border-collapse: collapse;
   margin-top: 20px;
@@ -26,15 +63,6 @@ input[type="submit"] {
 a {
   color: #ffffff;
 }
-.seats-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.summary-container {
-  text-align: center;
-  margin-top: 20px;
-}
 
 .summary-container .text {
   margin-bottom: 10px;
@@ -52,25 +80,7 @@ a {
   text-align: center;
   margin-top: 0;
 }
-.main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  flex-grow: 1;
-}
-.choose-container {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #ccc;
-}
-.movie-info-container {
-  padding: 10px;
-}
+
 .summary-container input[type="submit"] {
   border-radius: 5px;
   background-color: #000;
@@ -80,19 +90,31 @@ a {
 }
 .choose-container h4 {
   text-align: center;
+  margin: 1%;
 }
 .footer {
   background-color: #000;
   color: #fff;
   text-align: center;
-  position: relative;
   height: 5vh;
+  width: 100%;
 }
-.profile-menu-img {
-  display: block;
-  width: 5vh;
-  height: 5vh;
-  object-position: center;
-  border-radius: 50%;
-  margin-right: 10px;
+@media (max-width: 480px) {
+  .summary-container {
+    margin-top: 5px;
+  }
+  .choose-container {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 5px;
+  }
+  .seats-container {
+    max-width: 100%;
+  }
+  td {
+    padding: 1px;
+  }
+  input[type="submit"] {
+    margin-bottom: 1px;
+  }
 }

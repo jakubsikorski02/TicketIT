@@ -39,7 +39,7 @@
 
     </div>
     <div class="footer">
-        <p>Jakub Sikorski</p>
+        <p>2023 © Jakub Sikorski</p>
     </div>
 </body>
 

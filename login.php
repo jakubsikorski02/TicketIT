@@ -26,15 +26,15 @@ if (isset($_POST['login'])) {
         $hashed_password = $row['password'];
 
         if (password_verify($user_password, $hashed_password)) {
+            session_start();
             $_SESSION["logged"] = true;
             $_SESSION["userId"] = $row['id'];
             header("Location: index.php");
-            exit();
         } else {
-            $error_message = "Nieprawidłowy login lub hasło.";
+            $errorMessage = "Nieprawidłowy login lub hasło.";
         }
     } else {
-        $error_message = "Nieprawidłowy login lub hasło.";
+        $errorMessage = "Nieprawidłowy login lub hasło.";
     }
 
 }
@@ -56,9 +56,9 @@ if (isset($_POST['login'])) {
                 </div>
                 <div class="info">
                 <?php
-                        if (isset($message)) {
-                            echo "<p class='error'>$message</p>";
-                            unset($message);
+                        if (isset($errorMessage)) {
+                            echo "<p class='error'>$errorMessage</p>";
+                            unset($errorMessage);
                         }
                 ?>
             </div>
@@ -70,7 +70,7 @@ if (isset($_POST['login'])) {
         </div>
     </div>
     <div class="footer">
-        <p>Jakub Sikorski</p>
+        <p>2023 © Jakub Sikorski</p>
     </div>
 </body>
 </html>
