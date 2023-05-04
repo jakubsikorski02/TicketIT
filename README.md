@@ -1,9 +1,14 @@
+###How to
+  
+You can check out the website by visiting https://sikorskijakub.pl/TicketIT or u can run it on your own using e.g. XAMPP.  
+
 ### Log in
 
 If u want to log in u can use one of this accounts:  
 login: test | password: test  
 or  
 login: example | password: example123
+or you can create your own account.
 
 ### About project
 
