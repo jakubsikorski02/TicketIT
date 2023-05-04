@@ -17,6 +17,10 @@
         <div class="schedule-container">
             <h1>Choose date</h1>
             <?php
+            if(!isset($_SESSION['userId'])){
+              header("Location: login.php");
+          }
+          else{
             $movieId = $_GET['movieId'];
 
             $sql = "SELECT * FROM movies WHERE movie_id= $movieId";
@@ -52,7 +56,7 @@
             } else {
                 echo 'No schedule available for the selected movie.';
             }
-
+          }
             ?>
         </div>
     </div>
