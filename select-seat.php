@@ -14,6 +14,10 @@
   ?>
   <div class="main-container">
     <?php
+            if(!isset($_SESSION['userId'])){
+              header("Location: login.php");
+          }
+          else{
     $scheduleId = $_GET['scheduleId'];
     $sql2 = "SELECT movies.title, schedule.date, schedule.hour, cinema_hall.hall_name FROM cinema_hall, movies, schedule WHERE  schedule.schedule_id = $scheduleId AND movies.movie_id=schedule.movie_id AND schedule.hall_id = cinema_hall.hall_id;";
     $result2 = $conn->query($sql2);
@@ -134,6 +138,7 @@
     }
     echo '</div>';
       echo '</div>';
+          }
     ?>
   </div>
   <div class="footer">
