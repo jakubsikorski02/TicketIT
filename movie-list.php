@@ -17,7 +17,10 @@
     <div class="main-container">
         <?php
 
-
+            if(!isset($_SESSION['userId'])){
+              header("Location: login.php");
+          }
+          else{
         $sql = "SELECT DISTINCT movies.*
         FROM movies
         INNER JOIN schedule ON schedule.movie_id = movies.movie_id
@@ -42,6 +45,7 @@
             echo '</div>';
             echo '</div>';
         }
+       }
         ?>
     </div>
     <div class="footer">
