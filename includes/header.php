@@ -28,7 +28,7 @@
             echo '</div>';
             echo '</div>';
         } else {
-            echo '<a href="login.php" class="movies">Movies</a>';
+            echo '<a href="movie-list.php" class="movies">Movies</a>';
             echo '</div>';
             echo '<div class="profile-menu">';
             echo '<img src="images/profile.png" class="profile-menu-img">';
