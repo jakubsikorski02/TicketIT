@@ -1,3 +1,4 @@
+Notice: Project is still in development stage.
 ### How to
   
 You can check out the website by visiting https://sikorskijakub.pl/TicketIT or u can run it on your own using e.g. XAMPP.  
