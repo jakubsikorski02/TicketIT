@@ -13,7 +13,6 @@
   justify-content: center;
   padding: 20px;
   margin: 0;
-  position: relative;
   flex-grow: 1;
 }
 
@@ -26,7 +25,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.movie-poster{
+.movie-poster {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,7 +44,6 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 5px;
-
 }
 
 .movie-info h2 {
@@ -75,7 +73,7 @@
 .select-btn:hover {
   background-color: #007bff;
 }
-.link-btn{
+.link-btn {
   width: 100%;
 }
 
@@ -106,7 +104,6 @@
     margin-top: 10px;
     bottom: 0;
     right: 0;
-    position: relative;
   }
   .movie-card img {
     border-radius: 5px;
@@ -123,7 +120,7 @@
   .main-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .movie-poster{
+  .movie-poster {
     justify-content: flex-start;
   }
 }
@@ -131,7 +128,7 @@
   .main-container {
     grid-template-columns: repeat(3, 1fr);
   }
-  .movie-poster{
+  .movie-poster {
     justify-content: center;
   }
 }

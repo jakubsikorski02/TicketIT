@@ -24,13 +24,12 @@
     $exist = true;
     echo '<div class="select-container">';
     if (mysqli_num_rows($result2) > 0) {
-      while ($row2 = mysqli_fetch_assoc($result2)) {
-
+      while ($row2 = $result2->fetch_assoc()) {
         echo '<h1>Choose seat</h1>';
         echo '<div class="movie-info-container">';
         echo 'Title: ' . $row2["title"] . '<br>';
         echo 'Date: ' . $row2['date'] . '<br>';
-        echo 'Hour: ' . $row2['hour'] . '<br>';
+        echo 'Hour: ' . date("H:i", strtotime($row2["hour"])) . '<br>';
         echo 'Hall: ' . $row2['hall_name'] . '<br>';
 
       }
@@ -138,7 +137,7 @@
     }
     echo '</div>';
       echo '</div>';
-          }
+  }
     ?>
   </div>
   <div class="footer">

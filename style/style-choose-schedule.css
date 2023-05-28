@@ -1,0 +1,38 @@
+@import url(header.css);
+.main-container {
+    padding: 20px;
+  }
+  
+  .avaliable-schedule {
+    margin-top: 20px;
+  }
+  
+  .avaliable-schedule h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .avaliable-schedule a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .avaliable-schedule a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .avaliable-schedule p {
+    margin: 5px 0;
+  }
+  
+
+  
+  
+  
+  
+  
+  

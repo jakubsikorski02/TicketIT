@@ -9,6 +9,16 @@
         include("dbconnection.php");
         if (isset($_SESSION['userId'])) {
             $userId = $_SESSION['userId'];
+            if($_SESSION["userRole"] === 0){
+                
+                }
+                elseif($_SESSION["userRole"] === 1)
+                {
+                    echo '<a href="employee.php" class="Managment">Management</a>';
+                }
+                elseif($_SESSION["userRole"] === 2){
+                    echo '<a href="manager.php" class="management">Management</a>';
+                }
             echo '<a href="movie-list.php" class="movies">Movies</a>';
             echo '</div>';
             echo '<div class="profile-menu">';

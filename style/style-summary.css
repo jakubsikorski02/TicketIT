@@ -20,7 +20,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 
 .summary-container a {
@@ -36,7 +35,7 @@
   background-color: #000;
   color: #fff;
   text-align: center;
-  height: 5%
+  height: 5%;
 }
 
 .summary-btn {
@@ -50,4 +49,3 @@
   bottom: 5px;
   right: 5px;
 }
-

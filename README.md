@@ -5,9 +5,10 @@ You can check out the website by visiting https://sikorskijakub.pl/TicketIT or u
 ### Log in
 
 If u want to log in u can use one of these accounts:  
-login: test | password: test  
-or  
-login: example | password: example123
+login: test | password: test - login as a basic user
+or
+login: abc | password: abc - login as an employee
+
 or you can create your own account.
 
 ### About project
@@ -30,3 +31,5 @@ PHP, SQL, HTML, CSS, JavaScript
 -Shows a summary for the order that user has done.  
 -User can check their actual orders and history of their orders.  
 -User can check email and login signed to their account.
+-Employees can add new movies and schedules.
+-Employee can check who booked a seat for a particular screening.

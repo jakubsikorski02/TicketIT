@@ -1,0 +1,38 @@
+@import url(header.css);
+
+.main-container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+.movie-container {
+    margin-bottom: 20px;
+}
+
+.movie-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.movie-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.movie-container input[type="submit"]:hover {
+    background-color: #45a049;
+}

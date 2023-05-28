@@ -66,6 +66,7 @@
   background-color: #000;
   color: #fff;
   text-align: center;
+
   height: 5%;
 }
 @media (max-width: 480px) {
@@ -80,7 +81,7 @@
     text-align: center;
   }
   .selected-movie img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 0;
     margin-right: 0;
     margin-bottom: 10px;

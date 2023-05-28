@@ -29,7 +29,11 @@ if (isset($_POST['login'])) {
             session_start();
             $_SESSION["logged"] = true;
             $_SESSION["userId"] = $row['id'];
+            $_SESSION["userRole"] = $row['role'];
+            $_SESSION["userEmail"] = $row['email'];
+            if(isset($_SESSION['userId'])){
             header("Location: index.php");
+            }
         } else {
             $errorMessage = "Nieprawidłowy login lub hasło.";
         }

@@ -16,10 +16,10 @@
     <div class="main-container">
         <h1>Order Summary</h1>
         <?php
-            if(!isset($_SESSION['userId'])){
-              header("Location: login.php");
-          }
-          else{
+        if(!isset($_SESSION['userId'])){
+            header("Location: login.php");
+        }
+        else{
         $summaryId = $_SESSION["insertedId"];
         $sql = "SELECT movies.title, seats.row_number, seats.seat_number, schedule.date, schedule.hour, cinema_hall.hall_name 
             FROM movies, seats, schedule, booked, cinema_hall 
@@ -40,7 +40,7 @@
         } else {
             echo '<a href="movie-list.php">Book now!</a>';
         }
-       }
+    }
         ?>
     </div>
     <div class="footer">

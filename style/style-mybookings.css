@@ -3,6 +3,7 @@
 .main-container {
   display: flex;
   justify-content: left;
+  position: relative;
   padding: 0;
   margin: 0;
   flex-grow: 1;
@@ -29,6 +30,7 @@
   background-color: #000;
   color: #fff;
   text-align: center;
-  height: 5%;
+  position: relative;
+  height: 5vh;
 }
 

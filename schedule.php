@@ -41,7 +41,7 @@
                 while ($row2 = mysqli_fetch_assoc($result2)) {
                     $scheduleId = $row2['schedule_id'];
                     $date = $row2['date'];
-                    $hour = $row2['hour'];
+                    $hour = date("H:i", strtotime($row2["hour"]));
 
                     echo '<a href="select-seat.php?scheduleId=' . $scheduleId . '"><button type="submit" class="schedule-btn">' . $date . '<br>' . $hour . '</button></a>';
 
